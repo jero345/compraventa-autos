@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lavender-50: #f5f3ff;
+  --color-lavender-100: #ede9fe;
+  --color-lavender-200: #ddd6fe;
+  --color-lavender-300: #c4b5fd;
+  --color-lavender-400: #a78bfa;
+  --color-lavender-500: #8b5cf6;
+  --color-lavender-600: #7c3aed;
+  --color-lavender-700: #6d28d9;
+  --color-lavender-800: #5b21b6;
+  --color-lavender-900: #4c1d95;
+  --color-lavender-950: #2e1065;
+  
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+:root {
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-orbitron);
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Custom glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-purple {
+  background: rgba(139, 92, 246, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+/* Gradients */
+.bg-gradient-purple {
+  background: linear-gradient(135deg, #000 0%, #1a0b2e 100%);
+}
+
+.text-gradient-purple {
+  background: linear-gradient(to right, #a78bfa, #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scroll Animations placeholders */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
